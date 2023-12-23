@@ -10,7 +10,8 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-        'josefinSans': ['Josefin Sans', 'sans-serif']
+        'josefinSans': ['Josefin Sans', 'sans-serif'],
+        'diphylleia': ['Diphylleia', 'serif']
       },
       gridColumn: {
         'left-xl': '2 / 6',

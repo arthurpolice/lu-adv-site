@@ -32,7 +32,9 @@ export default function RodOfAsclepius({ position = [0, 0, 0], rotation = [0, 0,
           displacementMap: textureDisplacement,
           displacementScale: 0.05,
           displacementBias: 0.01,
-
+          color: "#4b2d0e",
+          emissive: "#000000",
+          emissiveIntensity: 100,
         })
       }
     })
@@ -42,13 +44,13 @@ export default function RodOfAsclepius({ position = [0, 0, 0], rotation = [0, 0,
   const light = useRef() as React.MutableRefObject<SpotLight>
   useFrame((state, delta) => {
     easing.damp3(light.current.position, [state.pointer.x * 12, 0, 8 + state.pointer.y * 4], 0.2, delta)
-    group.current.rotation.y += 0.002
+    group.current.rotation.y += 0.0008
   })
 
   return (
-    <group ref={group} position={[0, -2, 7]} rotation={[0, 0, -0.3]}>
-      <primitive object={rod} scale={[0.02, 0.02, 0.02]} />
-      <spotLight angle={0.5} penumbra={0.5} ref={light} castShadow intensity={25} distance={18} shadow-mapSize={1024} shadow-bias={-0.001}>
+    <group ref={group} position={position} rotation={rotation}>
+      <primitive object={rod} scale={[0.04, 0.04, 0.04]} />
+      <spotLight angle={1} penumbra={0.5} ref={light} castShadow intensity={200} distance={500} shadow-mapSize={1024} shadow-bias={-0.001}>
         <orthographicCamera attach="shadow-camera" args={[-10, 10, -10, 10, 0.1, 50]} />
       </spotLight>
     </group>
