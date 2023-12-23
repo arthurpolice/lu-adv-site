@@ -16,7 +16,7 @@ export default function LawSuiteType() {
     <>
       <span className='flex items-center w-full gap-2' onClick={() => setOpen(!open)}>
         <FaAngleRight className={`text-slate-700 size-6 transition-all duration-500 ${open ? 'rotate-90' : ''}`} />
-        <p className="text-center font-josefinSans text-2xl font-thin text-slate-700">
+        <p className="text-center font-josefinSans text-2xl font-thin text-slate-700 cursor-pointer">
           Lorem ipsum dolor
         </p>
       </span>
