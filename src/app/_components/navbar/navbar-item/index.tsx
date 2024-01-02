@@ -11,7 +11,8 @@ export default function NavbarItem({ name, selected, href, setSelected }: Navbar
   return (
     <Link
       href={href}
-      onClick={() => setSelected(name)}
+      onMouseEnter={() => setSelected(name)}
+      onMouseLeave={() => setSelected('')}
       className='relative tracking-widest flex flex-col items-center cursor-pointer'
     >
       {name}
