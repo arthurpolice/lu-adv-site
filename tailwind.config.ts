@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(circle at bottom right, rgba(60, 60, 60, 1) 0%, rgba(0, 0, 0, 1) 58%)',
+        'gradient-radial': 'radial-gradient(circle at bottom right, rgba(242, 242, 242, 1) 0%, rgba(0, 0, 0, 1) 85%)',
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

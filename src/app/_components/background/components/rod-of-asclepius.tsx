@@ -29,12 +29,11 @@ export default function RodOfAsclepius({ position = [0, 0, 0], rotation = [0, 0,
           normalMap: textureNormal,
           roughnessMap: textureRoughness,
           aoMap: textureAmbientOcclusion,
-          displacementMap: textureDisplacement,
-          displacementScale: 0.05,
-          displacementBias: 0.01,
           color: "#4b2d0e",
           emissive: "#000000",
           emissiveIntensity: 100,
+          transparent: false,
+          opacity: 1
         })
       }
     })
