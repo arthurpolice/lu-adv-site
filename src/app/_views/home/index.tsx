@@ -6,8 +6,8 @@ import Footer from '~/app/_components/footer'
 
 export default function Home() {
   return (
-    <div className='min-h-screen w-full'>
-      <div className="grid h-full min-h-screen w-full grid-cols-6 bg-transparent px-6 pt-44 xl:grid-cols-12 xl:px-12">
+    <div className='min-h-[100lvh] w-full'>
+      <div className="grid h-full min-h-[100lvh] w-full grid-cols-6 bg-transparent px-6 pt-44 xl:grid-cols-12 xl:px-12">
         <GridItem position='left' id='start' startRow='row-start-2'>
           <ProfilePicture />
           <h2 className="text-center font-diphylleia text-5xl font-bold tracking-wider text-slate-700">
