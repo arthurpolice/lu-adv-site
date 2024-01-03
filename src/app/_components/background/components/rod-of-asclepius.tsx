@@ -18,7 +18,6 @@ export default function RodOfAsclepius({ position = [0, 0, 0], rotation = [0, 0,
   const textureNormal = useLoader(TextureLoader, '/rod-of-asclepius/textures/wood_texture_normal.jpg')
   const textureRoughness = useLoader(TextureLoader, '/rod-of-asclepius/textures/wood_texture_roughness.jpg')
   const textureAmbientOcclusion = useLoader(TextureLoader, '/rod-of-asclepius/textures/wood_texture_ambientOcclusion.jpg')
-  const textureDisplacement = useLoader(TextureLoader, '/rod-of-asclepius/textures/wood_texture_displacement.jpg')
 
   useFrame(() => {
     rod.rotation.y += 0.002
@@ -42,7 +41,12 @@ export default function RodOfAsclepius({ position = [0, 0, 0], rotation = [0, 0,
   const group = useRef<Group<Object3DEventMap>>() as React.MutableRefObject<Group<Object3DEventMap>>
   const light = useRef() as React.MutableRefObject<SpotLight>
   useFrame((state, delta) => {
-    easing.damp3(light.current.position, [state.pointer.x * 12, 0, 8 + state.pointer.y * 4], 0.2, delta)
+    try {
+      easing.damp3(light.current.position, [state.pointer.x * 12, 0, 8 + state.pointer.y * 4], 0.2, delta)
+    } catch (error) {
+      console.log(error)
+    }
+
     group.current.rotation.y += 0.0008
   })
 

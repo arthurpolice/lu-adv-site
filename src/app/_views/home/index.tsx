@@ -1,12 +1,12 @@
 import ProfilePicture from "~/app/_components/profile-picture"
-import Card from "./components/card"
 import LawSuiteType from '~/app/_components/law-suite-type'
 import Contacts from '~/app/_components/contacts'
 import GridItem from './components/grid-item'
+import Footer from '~/app/_components/footer'
 
 export default function Home() {
   return (
-    <>
+    <div className='min-h-screen w-full'>
       <div className="grid h-full min-h-screen w-full grid-cols-6 bg-transparent px-6 pt-44 xl:grid-cols-12 xl:px-12">
         <GridItem position='left' id='start' startRow='row-start-2'>
           <ProfilePicture />
@@ -59,6 +59,7 @@ export default function Home() {
           <Contacts />
         </GridItem>
       </div>
-    </>
+      <Footer />
+    </div>
   )
 }
