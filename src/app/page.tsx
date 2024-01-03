@@ -8,7 +8,7 @@ export default async function App() {
   return (
     <>
       <Background />
-      <main className="flex !fixed max-h-[100vh] min-w-[90vw] flex-col items-center justify-center z-99 overflow-y-scroll">
+      <main className="flex !fixed h-full min-w-[90vw] flex-col items-center justify-center z-99 overflow-y-scroll">
         <Navbar />
         <Home />
       </main>
