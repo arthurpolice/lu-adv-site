@@ -5,12 +5,12 @@ import Home from './_views/home'
 export default async function App() {
 
   return (
-    <>
+    <div>
       <Background />
-      <main className="flex max-h-[100dvh] min-w-[90vw] flex-col items-center justify-center absolute z-99 overflow-y-scroll">
+      <main className="flex max-h-[100lvh] min-w-[90vw] flex-col items-center justify-center absolute z-99 overflow-y-scroll">
         <Navbar />
         <Home />
       </main>
-    </>
+    </div>
   )
 }
