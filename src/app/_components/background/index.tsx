@@ -9,7 +9,7 @@ export default function Background() {
   return (
     <Canvas
       shadows="basic"
-      className="bg-gradient-radial !absolute top-0 left-0 z-100 !h-[100dvh]"
+      className="bg-gradient-radial !absolute top-0 left-0 z-100 !h-[100lvh]"
       eventPrefix="client"
       camera={{ position: [0, 1.5, 14], fov: 45 }}
     >
