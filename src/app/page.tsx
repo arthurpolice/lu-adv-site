@@ -1,5 +1,4 @@
 import Background from './_components/background'
-import Footer from './_components/footer'
 import Navbar from './_components/navbar'
 import Home from './_views/home'
 
